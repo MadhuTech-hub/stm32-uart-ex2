@@ -38,7 +38,7 @@ void uart_wait_for_new_line(void)
 	//If "stm", then send OK to uart
 	//else send "Error" to uart
 	if (inputChar[0] == '\r') {
-		if (strncmp(myString, "stm32\r", 4) == 0) {
+		if (strncmp(myString, "stm32uc\r", 4) == 0) {
 			sprintf(myString, "OK\r\n");
 		} else {
 			sprintf(myString, "Error\r\n");
